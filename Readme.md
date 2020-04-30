@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александра Забелина](https://up.htmlacademy.ru/adaptive/19/user/1150929).
-* Наставник: `Неизвестно`.
+* Наставник: `Нет`.
 
 ---
 
