@@ -1,0 +1,20 @@
+.profile-field {
+  display: flex;
+  align-items: center;
+}
+
+.profile-field__text {
+  color: @darkgrey;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 11px;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-right: 17px;
+  }
+}
