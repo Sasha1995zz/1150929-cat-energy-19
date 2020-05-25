@@ -395,6 +395,10 @@
     line-height: 39px;
     text-transform: uppercase;
 
+    &:active {
+      color: @lightgray;
+    }
+
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 20px;
@@ -517,11 +521,5 @@
 .profile__block {
   @media (min-width: @desktop-width) {
     flex: 0 0 50%;
-  }
-}
-
-.profile__label--radio {
-  &:active {
-    opacity: 0.3;
   }
 }
