@@ -13,7 +13,7 @@
   margin-top: 25px;
 
   &:hover {
-    background-color: #5eaa2f;
+    background-color: @green;
   }
 
   &:active {
@@ -26,12 +26,24 @@
 }
 
 .btn--silver {
+  width: 280px;
+  margin: 0 auto;
+
   &:hover {
-    background-color: #ebebeb;
+    background-color: @lightgray;
   }
 
   &:active {
-    background-color: #ebebeb;
+    background-color: @lightgray;
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 248px;
+    margin-top: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 160px;
   }
 }

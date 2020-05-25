@@ -8,21 +8,21 @@
     font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
-    border: 1px solid rgba(205, 205, 205);
+    border: 1px solid @border-lightgray;
     height: 45px;
     width: 219px;
     padding-left: 14px;
 
     &:hover {
-      border-color: rgba(205, 205, 205);
+      border-color: @border-grey;
     }
 
     &:focus {
-      outline: 2px solid #444444;
+      outline: 2px solid @mediumgray;
     }
 
     &:active {
-      border: 2px solid #444444;
+      outline: 2px solid @mediumgray;
     }
 
     &::-webkit-input-placeholder {
@@ -34,10 +34,6 @@
       font-size: 20px;
       line-height: 20px;
       padding-left: 20px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 472px;
     }
   }
 }
@@ -69,7 +65,7 @@
   margin: 0;
   position: relative;
 
-  .profile__field-title::before {
+  &::before {
     width: 100%;
     content: " ";
     height: 3px;
@@ -92,20 +88,22 @@
     margin-top: 12px;
 
     @media (min-width: @tablet-width) {
-      margin-right: 500px;
+      margin-right: 450px;
+      margin-left: 30px;
+      padding: 0 40px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0;
-      margin-top: 9px;
-      margin-right: 1150px;
+      margin-top: 5px;
+      margin-right: 1170px;
+      margin-left: 15px;
+      padding: 0 40px;
     }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -144,14 +142,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 42px;
-    width: 45.6%;
+    margin-bottom: 38px;
+    width: 45%;
   }
 
   @media (min-width: @desktop-width) {
     flex: 0 0 25%;
     max-width: 25%;
-    padding-right: 18px;
+    padding-right: 19px;
     width: 325px;
   }
 }
@@ -176,8 +174,8 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 0 70px;
-    margin-top: 63px;
-    margin-bottom: 11px;
+    margin-top: 65px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -185,8 +183,8 @@
     width: 1220px;
     flex-flow: nowrap;
     padding: 0 110px;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-top: 66px;
+    margin-bottom: 25px;
   }
 }
 
@@ -198,37 +196,41 @@
   text-transform: uppercase;
   margin-top: 30px;
   resize: none;
-  width: 100%;
-  min-width: 275px;
+  width: 275px;
   height: 135px;
   text-align: center;
   padding-top: 10px;
   border: 1px solid rgba(205, 205, 205, 0.5);
+  overflow: hidden;
 
   &:hover {
-    border-color: rgba(205, 205, 205);
+    border-color: @border-grey;
   }
 
   &:focus {
-    outline: 2px solid #444444;
+    outline: 2px solid @mediumgray;
   }
 
   &:active {
-    border: 2px solid #444444;
+    outline: 2px solid @mediumgray;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    min-width: 610px;
-    width: 100%;
-    height: 160px;
+    width: 610px;
+    height: 155px;
     text-align: left;
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 15px;
+    margin-bottom: 42px;
+    margin-top: 74px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1210px;
+    width: 1200px;
+    height: 155px;
+    margin-top: 35px;
+    margin-bottom: 12px;
   }
 }
 
@@ -240,14 +242,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 11px 70px;
-    padding-right: 5px;
+    padding: 0;
+    padding-right: 81px;
   }
 }
 
 .profile__button {
   padding: 0 20px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 
   button {
     border: none;
@@ -261,9 +263,10 @@
     padding: 10px 68px 10px 71px;
 
     @media (min-width: @tablet-width) {
-      font-size: 18px;
+      font-size: 20px;
+      white-space: nowrap;
       width: 45%;
-      padding: 18px 68px 16px 71px;
+      padding: 18px 66px 16px 64px;
     }
 
     @media (min-width: @desktop-width) {
@@ -276,7 +279,7 @@
     display: flex;
     padding: 0 70px;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 73px;
   }
 
   @media (min-width: @desktop-width) {
@@ -295,7 +298,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    margin-left: 70px;
+    margin-left: 69px;
+    margin-top: 9px;
   }
 
   @media (min-width: @desktop-width) {
@@ -330,7 +334,7 @@
   padding: 6px 15px;
 
   &:focus:invalid {
-    outline: 2px solid #444444;
+    outline: 2px solid @mediumgray;
   }
 }
 
@@ -341,13 +345,13 @@
   box-sizing: border-box;
   display: inline-block;
   border: 1px solid @lightgray;
-  padding-top: 12px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    margin-top: 55px;
-    margin-bottom: 72px;
-    padding: 18px 73px;
+    margin-top: 50px;
+    margin-bottom: 71px;
+    padding-top: 35px;
+    padding-bottom: 1px;
   }
 }
 
@@ -371,7 +375,9 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    margin-left: -40px;
+    margin: 0;
+    margin-left: -36px;
+    top: -10px;
   }
 }
 
@@ -400,8 +406,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 15px;
     margin: 0;
+    padding-bottom: 32px;
+    padding-left: 22px;
   }
 }
 
@@ -421,9 +428,8 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    top: 5px;
-    left: 11px;
-    margin-left: -40px;
+    top: -9px;
+    margin-left: -34px;
   }
 }
 
@@ -453,14 +459,14 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 70%;
+  background-size: 50%;
 }
 
 .profile__type::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -2px;
+  top: -1px;
   display: block;
   width: 30px;
   height: 30px;
@@ -476,7 +482,7 @@
   padding: 7px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 46px 70px;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -502,7 +508,9 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    padding: 0 40px;
+    padding: 0 110px;
+    margin-top: 82px;
+    margin-bottom: 75px;
   }
 }
 

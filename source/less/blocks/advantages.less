@@ -10,13 +10,14 @@
     font-size: 60px;
     line-height: 60px;
     padding-left: 30px;
-    margin-top: 42px;
-    margin-bottom: 70px;
+    margin-top: 44px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 110px;
     margin-top: 70px;
+    margin-bottom: 71px;
   }
 }
 
@@ -30,12 +31,16 @@
     flex-wrap: wrap;
     padding: 0 30px;
     counter-reset: advantages-counter;
+    border-bottom: 1px solid @bg-grey;
+    padding-bottom: 100px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
+    padding-bottom: 0;
     padding-left: 112px;
     width: 1220px;
+    border: none;
   }
 }
 
@@ -101,7 +106,7 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
-    margin-top: 35px;
+    padding-top: 33px;
     width: 100%;
     font-size: 16px;
     line-height: 24px;

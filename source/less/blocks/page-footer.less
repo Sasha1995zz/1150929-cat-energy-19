@@ -18,6 +18,10 @@
   a {
     text-decoration: none;
     width: 286px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 10px;
     margin: 0 auto;
     font-size: 18px;
     color: grey;
@@ -27,6 +31,10 @@
 
     @media (min-width: @tablet-width) {
       width: 169px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
     }
   }
 
@@ -47,24 +55,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0 30px;
     margin: 0 auto;
-    width: 708px;
+    padding-left: 30px;
+    padding-right: 45px;
+    padding-top: 28px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1225px;
-    padding: 34px 40px;
+    padding: 38px 110px;
   }
 }
 
 .page-footer__social {
-  padding: 18px 0 18px;
+  padding-top: 18px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 60px;
   border-bottom: 1px solid @border-lightgray;
+  border-top: 1px solid @border-lightgray;
 
   @media (min-width: @tablet-width) {
     border: none;
     min-width: 123px;
+    padding: 0;
+    padding-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 20px;
   }
 }
 

@@ -1,6 +1,4 @@
 .page-header {
-  position: relative;
-
   a {
     color: @black;
     font-size: 18px;
@@ -19,11 +17,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 22px 0 0;
+    padding: 24px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 58px 0 0;
+    padding: 56px 0 0;
   }
 }
 
@@ -36,6 +34,10 @@
   @media (min-width: @tablet-width) {
     max-width: 174px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 201px;
+  }
 }
 
 .page-header--preview::after {
@@ -44,7 +46,7 @@
   min-height: 305px;
   width: 100%;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-color: #63a73a;
+  background-color: @green;
   background-position: bottom;
   background-repeat: no-repeat;
   z-index: -1;
@@ -71,19 +73,21 @@
 @media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .page-header--preview::after {
     background-image: url("../img/index-background-desktop@2x.jpg");
+    background-color: @bg-green;
   }
 }
 
 .page-header__menu {
   padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 13px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ededed;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  /*padding-bottom: 8px;
+  border-bottom: 1px solid #ededed;*/
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 30px;
     margin-top: 0;
     margin-bottom: 0;
