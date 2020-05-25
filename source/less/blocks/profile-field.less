@@ -1,6 +1,21 @@
 .profile-field {
   display: flex;
   align-items: center;
+  position: relative;
+
+  input {
+    @media (min-width: @desktop-width) {
+      width: 450px;
+    }
+  }
+}
+
+.profile-field__post {
+  input {
+    @media (min-width: @desktop-width) {
+      width: 480px;
+    }
+  }
 }
 
 .profile-field__text {
@@ -17,4 +32,12 @@
     line-height: 20px;
     margin-right: 17px;
   }
+}
+
+.profile-field__contact-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  transition: 0.3s;
 }

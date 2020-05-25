@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding-top: 25px;
+  padding-top: 24px;
   padding-left: 20px;
   padding-right: 33px;
   padding-bottom: 22px;
@@ -70,31 +70,31 @@
 
 .program-cat__toggle {
   color: @darkgrey;
-  font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
   padding-right: 10px;
-  background: @bg-grey;
+  font-size: 16px;
+  background: #f2f2f2;
   z-index: 1;
   transition: 0.3s;
 
-  .program-cat__toggle::after {
-    content: " ";
+  &::after {
+    content: "";
     position: absolute;
-    right: -28px;
+    right: -35px;
     top: 50%;
     width: 37px;
     height: 12px;
-    background: url("../img/icon-right-arrow-verylong.svg") no-repeat center;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat center;
     transform: translateY(-50%);
     z-index: -1;
     transition: 0.3s;
+  }
 
-    &:hover {
-      right: -36px;
-    }
+  &:hover::after {
+    right: -46px;
   }
 
   &:active {
@@ -115,7 +115,7 @@
   font-family: "Arial", "Tahoma", sans-serif;
   padding-bottom: 25px;
   border-bottom: 1px solid #dadada;
-  margin-top: 21px;
+  margin-top: 22px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
