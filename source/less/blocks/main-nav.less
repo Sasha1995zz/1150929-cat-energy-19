@@ -34,6 +34,16 @@
     border-bottom: 2px solid transparent;
   }
 
+  &--dynamical {
+    @media (min-width: @tablet-width) {
+      border-color: @bg-green;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-color: @bg-white;
+    }
+  }
+
   &--active {
     @media (min-width: @tablet-width) {
       border-color: @bg-green;
