@@ -1,0 +1,36 @@
+.profile-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input {
+    @media (min-width: @desktop-width) {
+      width: 450px;
+    }
+  }
+}
+
+.profile-field__text {
+  color: @darkgrey;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-right: 11px;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-right: 17px;
+  }
+}
+
+.profile-field__contact-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
