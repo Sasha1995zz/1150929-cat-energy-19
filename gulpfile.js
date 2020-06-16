@@ -15,6 +15,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var webp = require("gulp-webp");
 var del = require("del");
+var ghpages = require("gh-pages");
 
 gulp.task("clean", function () {
   return del("build");
@@ -82,9 +83,9 @@ gulp.task("server", function() {
     server: "build/"
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/js/**/*.js", ["js"]);
 });
 
 gulp.task("refresh", function(done) {
@@ -104,4 +105,4 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+ghpages.publish("build");
